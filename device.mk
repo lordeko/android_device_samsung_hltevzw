@@ -19,9 +19,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/hltevzw/hltevzw-vendor.mk)
 
+# NFC
+PRODUCT_PACKAGES += \
+    nfc_nci.pn54x.default
+
+PRODUCT_COPY_FILES += \
+    device/samsung/hltetmo/configs/security_nfc_profile.dat:system/etc/security_nfc_profile.dat \
+    device/samsung/hltetmo/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 
 # Common hlte
 $(call inherit-product, device/samsung/hlte-common/hlte.mk)
