@@ -24,8 +24,8 @@ PRODUCT_PACKAGES += \
     nfc_nci.pn54x.default
 
 PRODUCT_COPY_FILES += \
-    device/samsung/hltetmo/configs/security_nfc_profile.dat:system/etc/security_nfc_profile.dat \
-    device/samsung/hltetmo/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+    device/samsung/hltevzw/configs/security_nfc_profile.dat:system/etc/security_nfc_profile.dat \
+    device/samsung/hltevzw/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
